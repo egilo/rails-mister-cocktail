@@ -2,6 +2,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @random_cocktail = Cocktail.order("RANDOM()").first # Cocktail.find(Cocktail.pluck(:id).sample)
   end
 
   def show
