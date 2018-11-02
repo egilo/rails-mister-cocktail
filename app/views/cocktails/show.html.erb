@@ -1,6 +1,7 @@
 
 <div class="show">
 <h1><%= @cocktail.name.capitalize %></h1>
+</div>
 
 <% @cocktail.doses.each do |dose| %>
   <p><%= dose.ingredient.name %> | <%= dose.description %> | <%= link_to "delete", dose_path(dose), method: :delete %></p>
@@ -10,4 +11,3 @@
 
 <%= render "doses/form", cocktail: @cocktail,
 dose: Dose.new %>
-</div>

@@ -1,4 +1,4 @@
-Ingredient.delete_all
+# Ingredient.delete_all
 Cocktail.delete_all
 
 Ingredient.create(name: "lemon")
@@ -27,8 +27,13 @@ Ingredient.create(name: "egg")
 Ingredient.create(name: "pisco")
 Ingredient.create(name: "sambuca")
 
-Cocktail.create(name: "mojito")
-Cocktail.create(name: "negroni")
-Cocktail.create(name: "americano")
-Cocktail.create(name: "pisco sour")
-Cocktail.create(name: "martini")
+# Cocktail.create(name: "mojito")
+# Cocktail.create(name: "negroni")
+# Cocktail.create(name: "americano")
+# Cocktail.create(name: "pisco sour")
+# Cocktail.create(name: "martini")
+url = "https://res.cloudinary.com/dwvexlht9/image/upload/v1541173178/negroni.jpg"
+cocktail = Cocktail.new(name: "Negroni")
+cocktail.remote_photo_url = url
+cocktail.save
+
